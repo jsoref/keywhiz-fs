@@ -100,7 +100,7 @@ We can follow [this tutorial](https://jpetazzo.github.io/2014/08/24/syslog-docke
 docker run -v /tmp/syslogdev/log:/dev/log --device /dev/fuse:/dev/fuse --cap-add=IPC_LOCK --cap-add=SYS_ADMIN keywhizfs --debug=true --ca=/go/src/github.com/square/keywhiz-fs/fixtures/cacert.crt --key=/go/src/github.com/square/keywhiz-fs/fixtures/client.pem https://localhost:443 /secrets/kwfs
 ```
 
-Additionally, if you see the following error: `mlockall() failed with ENOMEM`, you are probably running your docker deamon with aufs, which does not support capability extensions, making `setcap 'cap_ipc_lock=+ep' /go/bin/keywhizfs` fail. You should use overlayFS instead.
+Additionally, if you see the following error: `mlockall() failed with ENOMEM`, you are probably running your docker daemon with aufs, which does not support capability extensions, making `setcap 'cap_ipc_lock=+ep' /go/bin/keywhizfs` fail. You should use overlayFS instead.
 
 # Contributing
 
