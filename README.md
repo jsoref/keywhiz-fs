@@ -45,7 +45,7 @@ user_allow_other
 
 ## fusermount setuid permissions
 
-The `fusermount` progam is used within the go-fuse library. Generally, it is installed setuid root, with group read/execute permissions for group 'fuse'. For KeywhizFs to work, the running user must be a member of the 'fuse' group.
+The `fusermount` program is used within the go-fuse library. Generally, it is installed setuid root, with group read/execute permissions for group 'fuse'. For KeywhizFs to work, the running user must be a member of the 'fuse' group.
 
 ## `CAP_IPC_LOCK` capability
 
